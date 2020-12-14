@@ -1,7 +1,7 @@
 'use strict';
 
 const findBestEmployee = function (employees) {
-  let resultValues = Object.values(employees);
+  const resultValues = Object.values(employees);
   let bestResult = resultValues[0];
 
   for (let i = 1; i <= resultValues.length; i += 1) {
@@ -10,9 +10,9 @@ const findBestEmployee = function (employees) {
     }
   }
 
-  let employeeEntries = Object.entries(employees);
+  const employeeEntries = Object.entries(employees);
   let bestEmployee;
-  for (let employeeEntry of employeeEntries) {
+  for (const employeeEntry of employeeEntries) {
     if (employeeEntry.includes(bestResult)) {
       bestEmployee = employeeEntry[0];
     }
